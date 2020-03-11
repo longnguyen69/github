@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // nhap vao hai so m va n tinsh tong tu m==>n
+        // vong them if la tinh so chan
+        // tinh tong gia tri so chinh phuong tu m den n
+        //tinh tong cac so nguyen to BTVN
+        function checkCP(n) {
+            return Number.isInteger(Math.sqrt(n));// mot so la so chinh phwuong neu gia tri can bac hai cua no la so nguyen
+        }
+
+        function soNguyenTo(n) {
+            let i;
+            for (i = 1; i < n; i++)
+                if (n % i == 0) {
+                    return false;
+                }
+        }
+
+        function calSum() {
+            let m = document.getElementById("m").value;
+            m = Number.parseInt(m);
+            let n = document.getElementById("n").value;
+            n = Number.parseInt(n);
+            let s = 0, i;
+            for (i = m; i <= n; i++) {
+                if
+                    // if (i% 2 == 0)
+                    // if (checkCP(i))
+                    if (soNguyenTo(i))
+                        s += i;
+
+            }
+            document.getElementById("sum").innerHTML = "" + s;
+        }
+    </script>
+</head>
+<body>
+<div>
+    <p>Nhap m: <input type="text" id="m" value="0" onkeyup="calSum()"></p>
+    <p>Nhap n: <input type="text" id="n" value="0" onkeyup="calSum()"></p>
+    <p>Tong la: <span id="sum">0</span></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyFor</title>
+    <script>
+        /* vua ga vua cho bo lai cho tron
+        36 con 100 chan chan
+         */
+        /* [BTVN]
+        tram trau tram co
+        cỏ bó trâu ăn
+        trâu đứng ăn năm
+        trâu nằm ăn ba
+        lụ khu trâu già
+        3 con một bó
+        * */
+        /*   let soGa, soCho;
+           for (soGa = 0; soGa <=36; soGa++)
+               for (soCho = 0; soCho <= 36; soCho++)
+                   if (soGa + soCho == 36 && 2 * soGa + 4 * soCho == 100)
+                       console.log("so ga: " + soGa);
+                       console.log("so cho: " + soCho); */
+        let traudung, traunam, traugia;
+        for (traudung = 0; traudung < 20; traudung++)
+            for (traunam = 0; traunam < 33; traunam++)
+                for (traugia = 0; traugia < 100; traugia++)
+
+                    if (traudung * 5 + traunam * 3 + traugia / 3 == 100 && traugia + traunam + traudung == 100 && traugia % 3 == 0)
+                        console.log("trau dung: " + traudung);
+        console.log("trau nam: " + traunam);
+        console.log("trau gia: " + traugia);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
