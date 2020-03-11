@@ -14,10 +14,11 @@
 
         function soNguyenTo(n) {
             let i;
-            for (i = 1; i < n; i++)
+            for (i = 2; i < n; i++)
                 if (n % i == 0) {
                     return false;
                 }
+            return true;
         }
 
         function calSum() {
@@ -27,7 +28,7 @@
             n = Number.parseInt(n);
             let s = 0, i;
             for (i = m; i <= n; i++) {
-                if
+
                     // if (i% 2 == 0)
                     // if (checkCP(i))
                     if (soNguyenTo(i))
