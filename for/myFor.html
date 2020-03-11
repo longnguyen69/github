@@ -21,15 +21,33 @@
                    if (soGa + soCho == 36 && 2 * soGa + 4 * soCho == 100)
                        console.log("so ga: " + soGa);
                        console.log("so cho: " + soCho); */
-        let traudung, traunam, traugia;
+       /* let traudung, traunam, traugia;
         for (traudung = 0; traudung < 20; traudung++)
             for (traunam = 0; traunam < 33; traunam++)
                 for (traugia = 0; traugia < 100; traugia++)
 
                     if (traudung * 5 + traunam * 3 + traugia / 3 == 100 && traugia + traunam + traudung == 100 && traugia % 3 == 0)
+                    {
                         console.log("trau dung: " + traudung);
-        console.log("trau nam: " + traunam);
-        console.log("trau gia: " + traugia);
+                        console.log("trau nam: " + traunam);
+                        console.log("trau gia: " + traugia);
+                    }
+
+        */
+       /*
+       quyts ngon mỗi quả chia ba
+       cam ngon môi quả chia ra làm 10
+       mỗi người một miếng trăm người
+       có 17 quả không nhiều đủ chia
+       * */
+       let c, q;
+       for (c=0; c<=17; c++)
+           for (q = 0; q <= 17; q++)
+               if (q*3 + c*10 == 100 && c + q == 17)
+               {
+                   console.log("so cam: " + c);
+                   console.log("so quyt: " + q);
+               }
     </script>
 </head>
 <body>
