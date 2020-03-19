@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhap Ngay Tháng</title>
+    <script>
+        function tinhSoNgay() {
+            let thang = +prompt("nhap thang: ");
+            let nam = +prompt("nhap nam: ");
+            alert("tháng " + thang + "/" + nam + "có " + tinhNgay(thang, nam) + "ngay");
+        }
+
+        function tinhSoNgayGiuaCacThang() {
+            let thangDau = +prompt("thang dau: ");
+            let thangCuoi = +prompt("thang cuoi: ");
+            let nam = +prompt("Nhap Nam:");
+            let i, sum = 0;
+            for (i = thangDau; i <= thangCuoi; i++)
+                sum += tinhNgay(i, nam);
+            alert("tong so ngay la: " + sum);
+        }
+
+        function tinhNgay(thang, nam) {
+            switch (thang) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    return 31;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    return 30;
+                case 2:
+                    if (kiemTraNhuan(nam))
+                        return 29;
+                    else return 28;
+                default:
+                    return "khong phai la thang hop le";
+
+            }
+        }
+
+        function kiemTraNhuan(nam) {
+            //nam nhuận là những năm chia hết cho 400 hoặc chia hết cho 4 nhưng không chia hết cho 100
+            return (nam % 400 == 0) || (nam % 4 == 0 && nam % 100 != 0);
+        }
+    </script>
+</head>
+<body>
+<button onclick="tinhSoNgay()"> Nhập tháng</button>
+<button onclick="tinhSoNgayGiuaCacThang()">tinh so ngay giua cac thang</button>
+</body>
+</html>
